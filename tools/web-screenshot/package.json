@@ -1,0 +1,36 @@
+{
+  "name": "@vibecoding/web-screenshot",
+  "version": "1.0.0",
+  "description": "Lightweight web screenshot tool for development logging",
+  "main": "src/index.js",
+  "bin": {
+    "VCKit-web-screen": "./bin/vckit-web-screen.js"
+  },
+  "scripts": {
+    "test": "node src/index.js https://www.baidu.com",
+    "install-global": "npm install -g ."
+  },
+  "keywords": [
+    "screenshot",
+    "puppeteer",
+    "development",
+    "logging",
+    "automation",
+    "nextjs",
+    "localhost"
+  ],
+  "author": "VibeCoding Team",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.0.0",
+    "commander": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChaosRealms-AI/VibeCoding-Kit.git",
+    "directory": "tools/web-screenshot"
+  }
+}
