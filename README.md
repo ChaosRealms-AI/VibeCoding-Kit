@@ -36,6 +36,40 @@ VCKit-web-screen -q http://localhost:3000
 
 **详细文档**: [tools/web-screenshot/README.md](./tools/web-screenshot/README.md)
 
+### 🚀 Proxy Speed Test Tool
+
+**位置**: `tools/proxy-speed-test/`
+
+**功能**: IP代理测速工具，用于测试和比较不同代理服务器的响应速度
+
+**主要特性**:
+- 可配置代理列表，支持用户自定义IP和端口
+- 多目标测试，同时测试多个网站的连接速度
+- 智能排序，自动按响应时间推荐最佳代理
+- 详细报告，显示成功率、平均响应时间等统计
+- 隐私保护，配置文件存储在用户主目录
+- 全局命令行工具 `VCKit-proxy-test`
+
+**使用场景**:
+- 代理服务器性能测试
+- 网络连接质量评估
+- 代理配置优化选择
+- 开发环境网络调试
+
+**快速开始**:
+```bash
+cd tools/proxy-speed-test
+npm install
+npm run install-global
+
+# 使用
+VCKit-proxy-test          # 直接测速
+VCKit-proxy-test config   # 查看配置
+VCKit-proxy-test edit     # 编辑配置
+```
+
+**详细文档**: [tools/proxy-speed-test/README.md](./tools/proxy-speed-test/README.md)
+
 ---
 
 ## 项目结构
@@ -44,14 +78,21 @@ VCKit-web-screen -q http://localhost:3000
 VibeCoding-Kit/
 ├── README.md                    # 项目总览
 └── tools/                       # 工具集合
-    └── web-screenshot/          # 网页截图工具
+    ├── web-screenshot/          # 网页截图工具
+    │   ├── README.md            # 工具详细文档
+    │   ├── package.json         # 项目配置
+    │   ├── conversation-log.md  # 开发日志
+    │   ├── src/                 # 源代码
+    │   │   └── index.js         # 主要功能实现
+    │   └── bin/                 # 全局命令
+    │       └── vckit-web-screen.js
+    └── proxy-speed-test/        # IP代理测速工具
         ├── README.md            # 工具详细文档
         ├── package.json         # 项目配置
-        ├── conversation-log.md  # 开发日志
         ├── src/                 # 源代码
         │   └── index.js         # 主要功能实现
         └── bin/                 # 全局命令
-            └── vckit-web-screen.js
+            └── vckit-proxy-test.js
 ```
 
 ## 安装与使用
@@ -67,6 +108,11 @@ cd VibeCoding-Kit
 
 # 安装 Web Screenshot Tool
 cd tools/web-screenshot
+npm install
+npm run install-global
+
+# 安装 Proxy Speed Test Tool
+cd ../proxy-speed-test
 npm install
 npm run install-global
 ```
